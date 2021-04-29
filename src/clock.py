@@ -13,19 +13,19 @@ class Clock:
         font24 = 'Heveltica 24'
 
 #hours
-        self.timeLabel = tk.LabelFrame(self.clockFrame, text = 'Bieżąca godzina:', font = font16)
+        self.timeLabel = tk.LabelFrame(self.clockFrame, text = 'Bieżąca godzina:', font = font16, bg = 'green', fg='black')
         self.timeLabel.grid(row=0, column=0, sticky = 'news')
 
         self.currentTime = datetime.now().strftime('%H:%M:%S')
-        self.currentTimeLabel = tk.Label(self.timeLabel, text=self.currentTime, font=font24)
+        self.currentTimeLabel = tk.Label(self.timeLabel, text=self.currentTime, font=font24,  bg = 'green', fg='black')
         self.currentTimeLabel.pack()
 
 #date
-        self.dataLabel = tk.LabelFrame(self.clockFrame, text = 'Bieżąca data:', font = font16)
+        self.dataLabel = tk.LabelFrame(self.clockFrame, text = 'Bieżąca data:', font = font16, bg = 'green', fg='black')
         self.dataLabel.grid(row=0, column=1, sticky='news')
 
         self.currentDate = datetime.today().strftime('%d-%m-%Y')
-        self.currentDateLabel = tk.Label(self.dataLabel, text = self.currentDate, font=font24)
+        self.currentDateLabel = tk.Label(self.dataLabel, text = self.currentDate, font=font24,  bg = 'green', fg='black')
         self.currentDateLabel.pack()
 
         self.update()
